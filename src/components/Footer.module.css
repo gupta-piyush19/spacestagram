@@ -1,0 +1,11 @@
+.footer {
+  padding: 10px;
+  text-align: center;
+}
+
+.footer p:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}

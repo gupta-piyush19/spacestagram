@@ -8,11 +8,7 @@ function App() {
   useEffect(() => {
     // getData();
   }, []);
-  return (
-    <Layout>
-      <Navbar />
-    </Layout>
-  );
+  return <Layout></Layout>;
 }
 
 export default App;

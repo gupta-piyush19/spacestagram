@@ -3,6 +3,7 @@ import styles from "./Navbar.module.css";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { SiNasa } from "react-icons/si";
 import { FiCodepen } from "react-icons/fi";
+import { FaReact } from "react-icons/fa";
 
 const Navbar = () => {
   const navbarLinks = [
@@ -17,14 +18,19 @@ const Navbar = () => {
       label: "Linkedin",
     },
     {
+      href: "https://api.nasa.gov/",
+      icon: <SiNasa />,
+      label: "NASA",
+    },
+    {
+      href: "https://piyushgupta.vercel.app/",
+      icon: <FaReact />,
+      label: "Portfolio",
+    },
+    {
       href: "https://codepen.io/Piyush0_0",
       icon: <FiCodepen />,
       label: "Codepen",
-    },
-    {
-      href: "https://api.nasa.gov/",
-      icon: <SiNasa />,
-      label: "Nasa",
     },
   ];
   return (
