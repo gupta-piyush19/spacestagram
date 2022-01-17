@@ -1,0 +1,49 @@
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid gray;
+  color: #fff;
+}
+
+.card_media {
+  min-height: 300px;
+}
+.card img {
+  height: 100%;
+  width: 100%;
+}
+
+.card_info {
+  padding: 12px;
+}
+
+.card iframe {
+  width: 100%;
+  min-height: 300px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  vertical-align: bottom;
+}
+.date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.author {
+  margin: 5px 0 10px 0;
+}
+
+.info {
+  padding: 0 6px;
+}

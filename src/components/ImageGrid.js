@@ -9,11 +9,10 @@ const ImageGrid = () => {
   const [data, loading, error] = useFetch();
 
   const breakpointColumnsObj = {
-    default: 3,
-    1100: 2,
-    500: 1,
+    default: 2,
+    1300: 2,
+    768: 1,
   };
-  //   const data = {copyright, date, explanation, media_type, url, title}
   console.log(data);
   if (error) return <h1>Something is Wrong in fetching the data.</h1>;
   if (loading) return <Loader />;
