@@ -6,9 +6,9 @@ const Card = ({ data }) => {
     <div className={styles.card}>
       <div className={styles.card_media}>
         {data.media_type === "image" ? (
-          <img src={data.url}></img>
+          <img alt={data.title} src={data.url}></img>
         ) : (
-          <iframe src={data.url}></iframe>
+          <iframe title={data.title} src={data.url}></iframe>
         )}
       </div>
       <div className={styles.card_info}>
