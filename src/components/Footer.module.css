@@ -1,6 +1,7 @@
 .footer {
   padding: 10px;
   text-align: center;
+  color: #fff;
 }
 
 .footer p:nth-child(2) {

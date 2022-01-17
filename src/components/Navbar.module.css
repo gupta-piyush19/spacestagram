@@ -16,6 +16,7 @@
   text-decoration: underline rgb(205, 0, 0) 5px;
   text-underline-offset: 5px;
   letter-spacing: -1px;
+  color: #fff;
 }
 
 .navbar__links {
@@ -30,13 +31,12 @@
 .navbar__link {
   height: 35px;
   width: 35px;
-  padding: 5px;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  padding: 2px;
   transition: all 0.1s ease-in-out;
-  color: red;
 }
 
 .navbar__link a svg {
   height: 100%;
   width: 100%;
+  color: #fff;
 }

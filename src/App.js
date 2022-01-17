@@ -1,13 +1,14 @@
 import { useEffect } from "react";
 import "./App.css";
 import Layout from "./components/Layout";
-import { getData } from "./utils/getData";
+import ImageGrid from "./components/ImageGrid";
 
 function App() {
-  useEffect(() => {
-    // getData();
-  }, []);
-  return <Layout></Layout>;
+  return (
+    <Layout>
+      <ImageGrid />
+    </Layout>
+  );
 }
 
 export default App;
