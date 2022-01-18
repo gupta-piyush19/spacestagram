@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Card.module.css";
 import { GoCalendar } from "react-icons/go";
-import { BsHeart, BsFillHeartFill } from "react-icons/bs";
+import { AiFillHeart } from "react-icons/ai";
 
 const Card = ({ data, liked, likePost, dislikePost }) => {
   const [readMore, setReadMore] = useState(false);
@@ -66,7 +66,12 @@ const Card = ({ data, liked, likePost, dislikePost }) => {
             liked ? dislikePost(data.title) : likePost(data.title);
           }}
         >
-          {liked ? <BsFillHeartFill /> : <BsHeart />}
+          <AiFillHeart
+            size={40}
+            style={{
+              color: liked ? "#bb0a1e" : "#fff",
+            }}
+          />
         </button>
       </div>
     </div>

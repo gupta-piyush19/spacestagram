@@ -84,14 +84,17 @@
 button.icon {
   margin-left: 6px;
   margin-top: 12px;
-  font-size: 24px;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 button.icon:hover {
-  animation: beat 0.6s infinite;
+  animation: beat 0.6s infinite alternate-reverse;
 }
+.icon svg {
+  transition: color 0.1s ease-in-out;
+}
+
 @keyframes beat {
   0% {
     transform: scale(1.1);
@@ -108,8 +111,4 @@ button.icon:hover {
   100% {
     transform: scale(1.1);
   }
-}
-
-.icon svg {
-  color: red;
 }
