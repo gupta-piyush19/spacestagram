@@ -1,8 +1,9 @@
 .card {
   border-radius: 10px;
   overflow: hidden;
-  border: 2px solid gray;
+  border: 2px solid #7d7d7d;
   color: #fff;
+  transition: all 3s ease-in;
 }
 
 .card_media {
@@ -45,5 +46,70 @@
 }
 
 .info {
+  display: block;
   padding: 0 6px;
+  transition: all 3s ease-in-out;
+}
+
+.read_more {
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.wrapping_info {
+  display: block;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 3s ease-in-out;
+}
+.cc {
+  overflow: hidden;
+  height: auto;
+  transition: all 3s ease-in-out;
+}
+
+.cc.hidden {
+  height: 0;
+}
+.hidden {
+  transition: all 3s ease-in-out;
+}
+.extra {
+  transition: all 3s ease-in-out;
+}
+
+button.icon {
+  margin-left: 6px;
+  margin-top: 12px;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+button.icon:hover {
+  animation: beat 0.6s infinite;
+}
+@keyframes beat {
+  0% {
+    transform: scale(1.1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.icon svg {
+  color: red;
 }

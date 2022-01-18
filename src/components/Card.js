@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Card.module.css";
 import { GoCalendar } from "react-icons/go";
-const Card = ({ data }) => {
+import { BsHeart, BsFillHeartFill } from "react-icons/bs";
+
+const Card = ({ data, liked, likePost, dislikePost }) => {
+  const [readMore, setReadMore] = useState(false);
   return (
     <div className={styles.card}>
       <div className={styles.card_media}>
@@ -22,7 +25,49 @@ const Card = ({ data }) => {
         {data.copyright ? (
           <p className={styles.author}>By: {data.copyright}</p>
         ) : null}
-        <p className={styles.info}>{data.explanation}</p>
+        <p className={styles.info}>
+          <p className={styles.wrapping_info}>
+            {data.explanation.substring(0, 120)}
+          </p>
+          <p className={`${styles.cc} ${readMore ? styles.hidden : ""}`}>
+            {data.explanation.substring(120)}
+          </p>
+          <button
+            className={styles.read_more}
+            onClick={() => setReadMore(!readMore)}
+          >
+            Read Less
+          </button>
+          {/* {readMore ? (
+            <>
+              {data.explanation}
+              <button
+                className={styles.read_more}
+                onClick={() => setReadMore(!readMore)}
+              >
+                Read Less
+              </button>
+            </>
+          ) : (
+            <>
+              {data.explanation.substring(0, 120)}...
+              <button
+                className={styles.read_more}
+                onClick={() => setReadMore(!readMore)}
+              >
+                Read More
+              </button>
+            </>
+          )} */}
+        </p>
+        <button
+          className={styles.icon}
+          onClick={() => {
+            liked ? dislikePost(data.title) : likePost(data.title);
+          }}
+        >
+          {liked ? <BsFillHeartFill /> : <BsHeart />}
+        </button>
       </div>
     </div>
   );
