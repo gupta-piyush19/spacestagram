@@ -61,12 +61,13 @@
 .read_more {
   margin-top: 5px;
   display: block;
-  background-color: transparent;
-  border: none;
-  color: #fff;
+  background-color: #fff;
+  color: #222;
   cursor: pointer;
-  text-decoration: underline;
-  font-size: 15px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
 }
 button.icon {
   margin-left: 6px;
