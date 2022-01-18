@@ -26,39 +26,21 @@ const Card = ({ data, liked, likePost, dislikePost }) => {
           <p className={styles.author}>By: {data.copyright}</p>
         ) : null}
         <p className={styles.info}>
-          <p className={styles.wrapping_info}>
-            {data.explanation.substring(0, 120)}
-          </p>
-          <p className={`${styles.cc} ${readMore ? styles.hidden : ""}`}>
-            {data.explanation.substring(120)}
+          <p
+            className={styles.wrapping_info}
+            style={{
+              maxHeight: readMore ? "1500px" : "100px",
+              transition: "all 0.5s ease-in-out",
+            }}
+          >
+            {data.explanation}
           </p>
           <button
             className={styles.read_more}
             onClick={() => setReadMore(!readMore)}
           >
-            Read Less
+            Read {readMore ? "Less" : "More"}
           </button>
-          {/* {readMore ? (
-            <>
-              {data.explanation}
-              <button
-                className={styles.read_more}
-                onClick={() => setReadMore(!readMore)}
-              >
-                Read Less
-              </button>
-            </>
-          ) : (
-            <>
-              {data.explanation.substring(0, 120)}...
-              <button
-                className={styles.read_more}
-                onClick={() => setReadMore(!readMore)}
-              >
-                Read More
-              </button>
-            </>
-          )} */}
         </p>
         <button
           className={styles.icon}

@@ -8,10 +8,15 @@
 
 .card_media {
   min-height: 300px;
+  overflow: hidden;
 }
 .card img {
   height: 100%;
   width: 100%;
+  transition: all 0.4s ease-in-out;
+}
+.card img:hover {
+  transform: scale(1.1);
 }
 
 .card_info {
@@ -50,37 +55,19 @@
   padding: 0 6px;
   transition: all 3s ease-in-out;
 }
-
+.wrapping_info {
+  overflow: hidden;
+}
 .read_more {
+  margin-top: 5px;
   display: block;
   background-color: transparent;
   border: none;
   color: #fff;
   cursor: pointer;
   text-decoration: underline;
+  font-size: 15px;
 }
-.wrapping_info {
-  display: block;
-  margin-bottom: 20px;
-  overflow: hidden;
-  transition: all 3s ease-in-out;
-}
-.cc {
-  overflow: hidden;
-  height: auto;
-  transition: all 3s ease-in-out;
-}
-
-.cc.hidden {
-  height: 0;
-}
-.hidden {
-  transition: all 3s ease-in-out;
-}
-.extra {
-  transition: all 3s ease-in-out;
-}
-
 button.icon {
   margin-left: 6px;
   margin-top: 12px;
