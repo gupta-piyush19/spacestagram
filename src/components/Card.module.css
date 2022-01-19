@@ -69,20 +69,28 @@
   font-weight: 600;
   letter-spacing: 0.6px;
 }
-button.icon {
+.button_container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
   margin-left: 6px;
-  margin-top: 12px;
+  gap: 10px;
+}
+
+.button_container button {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-button.icon:hover {
+button.like_icon:hover {
   animation: beat 0.6s infinite alternate-reverse;
 }
-.icon svg {
+.like_icon svg {
   transition: color 0.1s ease-in-out;
 }
-
+button.copy_icon {
+  color: #fff;
+}
 @keyframes beat {
   0% {
     transform: scale(1.1);
