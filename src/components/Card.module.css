@@ -3,7 +3,6 @@
   overflow: hidden;
   border: 2px solid #7d7d7d;
   color: #fff;
-  transition: all 3s ease-in;
 }
 
 .card_media {
@@ -45,6 +44,7 @@
   gap: 10px;
   font-size: 18px;
   margin-bottom: 4px;
+  white-space: nowrap;
 }
 .author {
   margin: 5px 0 10px 0;
@@ -106,5 +106,25 @@ button.copy_icon {
   }
   100% {
     transform: scale(1.1);
+  }
+}
+
+@media (max-width: 650px) {
+  .card_media,
+  .card iframe {
+    min-height: auto;
+  }
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button.like_icon:hover {
+    animation: none;
+  }
+  .like_icon svg {
+    transition: color 0.2s ease-in-out;
   }
 }
